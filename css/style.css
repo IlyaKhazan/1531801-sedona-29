@@ -33,14 +33,17 @@ img {
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .intro {
-    background-image: url("../img/intro_background.jpg");
+    background-image: url(../img/intro-background.jpg);
     background-repeat: no-repeat;
     height: 509px;
     text-align: center;
@@ -172,6 +175,18 @@ img {
 .footer-copyright__link {
     color: var(--black);
     text-decoration: none;
+}
+
+.footer-copyright__logo {
+    fill: var(--brown-500);
+}
+
+.footer-copyright__logo:hover {
+    fill: var(--blue-400);
+}
+
+.footer-copyright__logo:active {
+    fill: var(--grey-400);
 }
 
 .main-navigation__link_current {
