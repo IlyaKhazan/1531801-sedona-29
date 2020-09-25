@@ -80,8 +80,7 @@ body {
 
 .main-header__logo {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    padding-left: 530px;
 }
 
 .main-navigation__link {
@@ -131,7 +130,6 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr min-content min-content;
 }
 
 .features__item-realcity {
@@ -142,7 +140,6 @@ body {
 
 .features__item-devilsbridge {
     grid-column: 1/4;
-    grid-row: 2/3;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -165,12 +162,12 @@ body {
     padding-bottom: 55px;
 }
 
-.features__item_blue-bg {
+.features__item_bg_blue {
     color: var(--white);
     background-color: var(--blue-400);
 }
 
-.features__item_grey-bg {
+.features__item_bg_grey {
     background-color: var(--grey-800);
 }
 
