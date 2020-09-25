@@ -80,7 +80,8 @@ body {
 
 .main-header__logo {
     position: absolute;
-    padding-left: 530px;
+    left: 50%;
+    margin-left: -69px;
 }
 
 .main-navigation__link {
