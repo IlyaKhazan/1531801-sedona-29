@@ -346,23 +346,19 @@ body {
 .hotels__item {
     display: grid;
     grid-template-columns: 135px 1fr 120px;
-    grid-template-rows: min-content 1fr 1fr;
     column-gap: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
     border-top: 1px solid var(--grey-500);
 }
 
-.hotels__title-block {
+.hotels__subtitle {
     grid-column: 2/3;
     grid-row: 1/2;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
     align-self: start;
-}
-
-.hotels__subtitle {
     margin-top: -4px;
     margin-bottom: 4px;
 }
@@ -375,7 +371,7 @@ body {
 .hotels__type-price {
     grid-column: 2/3;
     grid-row: 2/3;
-    align-self: center;
+    align-self: start;
     display: grid;
     grid-template-columns: 112px 1fr;
 }
