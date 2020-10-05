@@ -106,21 +106,18 @@ body {
 .main-navigation__list {
     list-style: none;
     padding: 15px 72px;
+    margin: 0px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .main-navigation__item {
-    width: 264px;
-    text-align: left;
+    width: 228px;
 }
 
-.main-navigation__item:nth-child(4n+3) {
-    text-align: right;
-}
-
-.main-navigation__item:nth-child(4n+4) {
+.main-navigation__item:nth-child(4n-1),
+.main-navigation__item:nth-child(4n) {
     text-align: right;
 }
 
@@ -266,20 +263,45 @@ body {
     text-align: left;
     line-height: 26px;
     font-weight: 700;
-    display: flex;
-    flex-direction: column;
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
     margin-top: 0;
-    padding-top: 55px;
+    padding: 55px;
     margin-bottom: 78px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search__form_set {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+.search__form_calendar-button {
+    position: absolute;
+    left: 92%;
+    bottom: 50%;
+    border: 0px;
+}
+
+.search__form_calendar-icon {
+    fill: var(--grey-600);
+}
+
+.search__form_calendar-icon:hover {
+    fill: var(--black);
+}
+
+.search__form_calendar-icon:active {
+    fill: var(--blue-400);
 }
 
 .search__form_date-field {
-    width: 346px;
-    height: 38px;
     margin-bottom: 30px;
     border: 0px;
+    height: 38px;
     background-color: var(--grey-300);
+    flex-grow: 1;
 }
 
 .search__form_date-field:hover {
@@ -292,10 +314,11 @@ body {
 }
 
 .search__form_number-field {
-    width: 114px;
-    height: 38px;
     border: 0px;
     background-color: var(--grey-300);
+    height: 38px;
+    width: 0;
+    flex-grow: 1;
 }
 
 .search__form_number-field:hover {
@@ -307,24 +330,21 @@ body {
     border: 2px solid var(--grey-500);
 }
 
-.search__form_label_checkin {
-    margin-left: 55px;
+.search__form_checkin-gap {
     margin-right: 20px;
 }
 
-.search__form_label_checkout {
-    margin-left: 55px;
-    margin-right: 18px;
+.search__form_checkout-gap {
+    margin-right: 16px;
 }
 
-.search__form_label_adults {
-    margin-left: 55px;
-    margin-right: 38px;
+.search__form_adults-gap {
+    margin-right: 40px;
 }
 
-.search__form_label_children {
-    margin-left: 55px;
-    margin-right: 20px;
+.search__form_children-gap {
+    margin-left: 53px;
+    margin-right: 27px;
 }
 
 .search__form_submit-button {
@@ -333,11 +353,11 @@ body {
     text-transform: uppercase;
     color: var(--white);
     background-color: var(--blue-400);
-    width: 458px;
+    width: 100%;
     height: 58px;
     justify-content: center;
-    margin: 55px;
     border: 0px;
+    margin-top: 55px;
 }
 
 .search__form_submit-button:hover {
