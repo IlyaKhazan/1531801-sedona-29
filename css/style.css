@@ -65,6 +65,7 @@ body {
 .page-body {
     height: 100%;
     display: grid;
+    position: relative;
 }
 
 .container {
@@ -268,86 +269,75 @@ body {
     padding: 55px;
     margin-bottom: 78px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.search__form_set {
+.search__field {
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+    flex-grow: 1;
     position: relative;
 }
 
-.search__form_calendar-button {
+.search__field_half {
+    width: 50%;
+}
+
+.search__field+.search__field {
+    margin-top: 30px;
+}
+
+.search__input {
+    border: 2px solid var(--grey-300);
+    height: 38px;
+    width: 346px;
+    background-color: var(--grey-300);
+}
+
+.search__input:hover {
+    background-color: var(--grey-100);
+}
+
+.search__input:focus {
+    background-color: var(--white);
+    border: 2px solid var(--grey-500);
+    outline: none;
+}
+
+.search__input_qty {
+    width: 114px;
+}
+
+.search__label {
+    margin-right: 20px;
+    padding-top: 5px;
+}
+
+.search__label_padding {
+    padding-left: 55px;
+}
+
+.search__calendar-button {
     position: absolute;
-    left: 92%;
-    bottom: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
     border: 0px;
 }
 
-.search__form_calendar-icon {
+.search__calendar-button .search__calendar-icon {
     fill: var(--grey-600);
 }
 
-.search__form_calendar-icon:hover {
+.search__calendar-button .search__calendar-icon:hover {
     fill: var(--black);
 }
 
-.search__form_calendar-icon:active {
+.search__calendar-button .search__calendar-icon:active {
     fill: var(--blue-400);
 }
 
-.search__form_date-field {
-    margin-bottom: 30px;
-    border: 0px;
-    height: 38px;
-    background-color: var(--grey-300);
-    flex-grow: 1;
-}
-
-.search__form_date-field:hover {
-    background-color: var(--grey-100);
-}
-
-.search__form_date-field:focus {
-    background-color: var(--white);
-    border: 2px solid var(--grey-500);
-}
-
-.search__form_number-field {
-    border: 0px;
-    background-color: var(--grey-300);
-    height: 38px;
-    width: 0;
-    flex-grow: 1;
-}
-
-.search__form_number-field:hover {
-    background-color: var(--grey-100);
-}
-
-.search__form_number-field:focus {
-    background-color: var(--white);
-    border: 2px solid var(--grey-500);
-}
-
-.search__form_checkin-gap {
-    margin-right: 20px;
-}
-
-.search__form_checkout-gap {
-    margin-right: 16px;
-}
-
-.search__form_adults-gap {
-    margin-right: 40px;
-}
-
-.search__form_children-gap {
-    margin-left: 53px;
-    margin-right: 27px;
-}
-
-.search__form_submit-button {
+.search__submit-button {
     font-size: 21px;
     font-weight: 700;
     text-transform: uppercase;
@@ -360,11 +350,11 @@ body {
     margin-top: 55px;
 }
 
-.search__form_submit-button:hover {
+.search__submit-button:hover {
     background-color: var(--blue-500);
 }
 
-.search__form_submit-button:active {
+.search__submit-button:active {
     background-color: var(--blue-700);
 }
 
