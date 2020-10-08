@@ -28,18 +28,53 @@
             <h1 class="visually-hidden">Поиск гостиницы</h1>
             <section class="filter">
                 <h2 class="visually-hidden">Фильтр отелей</h2>
-                <!-- Здесь будет форма фильтра -->
+
+                <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter__item">
+                        <legend class="filter__item-legend">Инфраструктура:</legend>
+                        <ul class="filter__item-list">
+                            <li>Бассейн</li>
+                            <li>Парковка</li>
+                            <li>WI-FI</li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="filter__item">
+                        <legend class="filter__item-legend">Тип жилья:</legend>
+                        <ul class="filter__item-list">
+                            <li>Гостиница</li>
+                            <li>Мотель</li>
+                            <li>Апартаменты</li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="filter__item">
+                        <legend class="filter__item-legend">Стоимость в сутки:</legend>
+                        <div class="filter__range-filter">
+                            <div class="filter__price-controls">
+                                <label class="filter__price-label">От<input class="filter__input" type="number" name="min-price" value="0" tabindex="0"></label>
+                                <label class="filter__price-label">До<input class="filter__input" type="number" name="max-price" value="3000" tabindex="0"></label>
+                            </div>
+                            <div class="filter__range-controls">
+                                <div class="filter__scale">
+                                    <div class="filter__bar"></div>
+                                </div>
+                                <div class="filter__toggle filter__toggle_min"></div>
+                                <div class="filter__toggle filter__toggle_max"></div>
+                            </div>
+                        </div>
+                        <button class="filter__button" type="button">Показать</button>
+                    </fieldset>
+                </form>
             </section>
             <section class="results">
                 <h2 class="visually-hidden">Результат и сортировка</h2>
                 <p class="results__quantity">Найдено: 3</p>
-                <p>Сортировка:</p>
-                <ul class="results__list">
-                    <li><a class="results__link results__link_current" href="">По цене</a></li>
-                    <li><a class="results__link" href="">По типу</a></li>
-                    <li><a class="results__link" href="">По рейтингу</a></li>
+                <p class="results__sort">Сортировка:</p>
+                <ul class="results__main-list">
+                    <li class="results__item"><a class="results__link results__link_current" href="">По цене</a></li>
+                    <li class="results__item"><a class="results__link" href="">По типу</a></li>
+                    <li class="results__item"><a class="results__link" href="">По рейтингу</a></li>
                 </ul>
-                <ul class="results__list">
+                <ul class="results__updown-list">
                     <li><a href=""><span class="visually-hidden">По возрастанию</span></a></li>
                     <li><a href=""><span class="visually-hidden">По убыванию</span></a></li>
                 </ul>
