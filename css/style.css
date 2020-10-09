@@ -461,7 +461,6 @@ body {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     margin-left: auto;
 }
@@ -606,7 +605,7 @@ body {
 }
 
 .filter {
-    background-image: url(..//img/filter-background.jpg);
+    background-image: url(../img/filter-background.jpg);
     padding: 0 73px 30px 73px;
     color: var(--white);
 }
@@ -655,7 +654,6 @@ body {
 .filter__range-controls {
     position: relative;
     height: 20px;
-    border-radius: 5px;
     padding-top: 9px;
     margin-bottom: 33px;
 }
@@ -668,7 +666,7 @@ body {
 .filter__bar {
     background: var(--white);
     height: 2px;
-    width: 80%;
+    width: 100%;
 }
 
 .filter__toggle {
@@ -683,10 +681,6 @@ body {
     cursor: pointer;
 }
 
-.filter__toggle_max {
-    left: 250px;
-}
-
 .filter__input {
     background-color: transparent;
     text-align: center;
@@ -695,8 +689,10 @@ body {
     color: inherit;
 }
 
+.filter__item:nth-child(1),
 .filter__item:nth-child(2) {
-    margin-left: 120px;
+    width: 200px;
+    margin-right: 30px;
 }
 
 .filter__item:nth-child(3) {
