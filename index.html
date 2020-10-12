@@ -42,15 +42,15 @@
                         </div>
                         <img class="features__photos" src="img/real-city.jpg" width="800" height="256" alt="Вид из окна на улицу Седоны">
                         <ul class="features__recomendations-list">
-                            <li class="features__recomendations-item">
+                            <li class="features__recomendations-item features__recomendations-item_house-icon">
                                 <h4 class="features__header">Жильё</h4>
                                 <p>Рекомендуем пожить в настоящем <br> мотеле, всё как в кино!</p>
                             </li>
-                            <li class="features__recomendations-item">
+                            <li class="features__recomendations-item features__recomendations-item_food-icon">
                                 <h4 class="features__header">Еда</h4>
                                 <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
                             </li>
-                            <li class="features__recomendations-item">
+                            <li class="features__recomendations-item features__recomendations-item_gifts-icon">
                                 <h4 class="features__header">Сувениры</h4>
                                 <p>Не только китайского, но и местного <br> производства!</p>
                             </li>
@@ -116,15 +116,36 @@
                     </div>
                     <div class="search__field search__field_half">
                         <label class="search__label" for="adults">Взрослые:</label>
-                        <input class="search__input search__input_qty" type="number" name="adults" id="adults" value="2">
+                        <input class="search__input search__input_qty" type="number" name="adults" id="adults">
+                        <button class="search__minus-button" type="button">
+                          <svg class="search__minus-icon" width="12" height="3"
+                viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="3" />
+              </svg> </button>
+                        <button class="search__plus-button" type="button"><svg class="search__plus-icon" width="11" height="11"
+                viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+              </svg> </button>
                     </div>
                     <div class="search__field search__field_half">
                         <label class="search__label search__label_padding" for="children">Дети:</label>
-                        <input class="search__input search__input_qty" type="number" name="children" id="children" value="0">
+                        <input class="search__input search__input_qty" type="number" name="children" id="children">
+                        <button class="search__minus-button" type="button"><svg class="search__minus-icon" width="12" height="3"
+                viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="3" />
+              </svg> </button>
+                        <button class="search__plus-button" type="button"><svg class="search__plus-icon" width="11" height="11"
+                viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+              </svg> </button>
                     </div>
                     <input class="search__submit-button" type="submit" value="Найти">
                 </form>
             </section>
+            <section class="map"></section>
+            <h2 class="visually-hidden">Карта</h2>
         </main>
         <footer class="page-footer">
             <section class="contacts">
@@ -135,12 +156,23 @@
             <section class="footer-socials">
                 <h2 class="visually-hidden">Соцсети</h2>
                 <ul class="footer-socials__list">
-                    <li class="footer-socials__button"><a class="footer-socials__link" href="#"><span
-                class="visually-hidden">Твиттер</span></a></li>
-                    <li class="footer-socials__button"><a class="footer-socials__link" href="#"><span
-                class="visually-hidden">Фейсбук</span></a></li>
-                    <li class="footer-socials__button"><a class="footer-socials__link" href="#"><span
-                class="visually-hidden">Ютуб</span></a></li>
+                    <li><a class="footer-socials__button" href="#"><span class="visually-hidden">Твиттер</span>
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
+                  fill="white" />
+              </svg></a></li>
+                    <li><a class="footer-socials__button" href="#"><span class="visually-hidden">Фейсбук</span><svg width="12"
+                height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+              </svg></a></li>
+                    <li><a class="footer-socials__button" href="#"><span class="visually-hidden">Ютуб</span>
+                      <svg width="20"
+                height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                  fill="white" />
+              </svg></a></li>
                 </ul>
             </section>
             <div>
