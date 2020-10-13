@@ -32,11 +32,13 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
 
 input[type=number] {
+    -moz-appearance: textfield;
     appearance: textfield;
 }
 
@@ -50,7 +52,7 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
+    border: none;
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -280,7 +282,7 @@ body {
     height: 86px;
     width: 568px;
     margin-top: 45px;
-    border: 0px;
+    border: none;
 }
 
 .search__header-button:hover {
@@ -363,73 +365,50 @@ body {
     top: 0;
     right: 0;
     bottom: 0;
-    border: 0px;
+    border: none;
 }
 
-.search__calendar-button .search__calendar-icon {
+.search__calendar-icon {
     fill: var(--grey-600);
 }
 
-.search__calendar-button .search__calendar-icon:hover {
+.search__calendar-button:hover .search__calendar-icon {
     fill: var(--black);
 }
 
-.search__calendar-button .search__calendar-icon:active {
+.search__calendar-button:active .search__calendar-icon {
     fill: var(--blue-400);
 }
 
 .search__number-button {
     position: absolute;
+    top: 0;
+    bottom: 0;
     width: 40px;
     height: 38px;
-    border: 0;
+    border: none;
     display: flex;
-    justify-content: center;
 }
 
 .search__number-button_plus {
-    top: 0;
     right: 0;
-    bottom: 0;
-    border: 0;
 }
 
 .search__number-button_minus {
-    top: 0;
-    left: 113px;
-    bottom: 0;
+    right: 77px;
 }
 
-.search__number-button .search__plus-icon {
+.search__number-icon {
+    margin: auto;
     fill: var(--grey-600);
 }
 
-.search__number-button .search__plus-icon:hover {
+.search__number-button:hover .search__number-icon {
     fill: var(--black);
 }
 
-.search__number-button .search__plus-icon:active {
+.search__number-button:active .search__number-icon {
     fill: var(--blue-400);
-}
-
-.search__number-button .search__minus-icon {
-    fill: var(--grey-600);
-}
-
-.search__number-button .search__minus-icon:hover {
-    fill: var(--black);
-}
-
-.search__number-button .search__minus-icon:active {
-    fill: var(--blue-400);
-}
-
-.search__minus-icon {
-    align-self: center;
-}
-
-.search__plus-icon {
-    align-self: center;
 }
 
 .search__submit-button {
@@ -441,7 +420,7 @@ body {
     width: 100%;
     height: 58px;
     justify-content: center;
-    border: 0px;
+    border: none;
     margin-top: 55px;
 }
 
