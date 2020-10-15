@@ -563,6 +563,22 @@ body {
     text-align: right;
 }
 
+.results__updown-list li:first-child path {
+    fill: var(--grey-200);
+}
+
+.results__updown-list li:last-child path {
+    fill: var(--blue-400);
+}
+
+.results__updown-list li:hover path {
+    fill: var(--black);
+}
+
+.results__updown-list li:active path {
+    fill: var(--blue-400);
+}
+
 .results__link {
     color: var(--black-opacity-3);
     border-bottom: 1px dashed var(--blue-400);
@@ -855,6 +871,28 @@ body {
     background-repeat: no-repeat;
 }
 
+.filter__checkbox-input:disabled+label::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 23px;
+    left: -40px;
+    background-image: url(../img/checkbox-off-disabled.svg);
+    background-repeat: no-repeat;
+    cursor: auto;
+}
+
+.filter__checkbox-input:checked:disabled+label::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 23px;
+    left: -40px;
+    background-image: url(../img/checkbox-on-disabled.svg);
+    background-repeat: no-repeat;
+    cursor: auto;
+}
+
 .filter__price-controls label {
     position: relative;
     padding-left: 50px;
@@ -877,4 +915,9 @@ body {
     height: 36px;
     border: 2px solid var(--white);
     margin-left: 85px;
+}
+
+.filter__button:hover {
+    background-color: var(--white);
+    color: var(--black);
 }
