@@ -558,24 +558,24 @@ body {
     margin-left: auto;
 }
 
-.results__updown-list li {
+.results__updown-item {
     width: 30px;
     text-align: right;
 }
 
-.results__updown-list li:first-child path {
+.results__updown-item path {
     fill: var(--grey-200);
 }
 
-.results__updown-list li:last-child path {
-    fill: var(--blue-400);
-}
-
-.results__updown-list li:hover path {
+.results__updown-item:hover path {
     fill: var(--black);
 }
 
-.results__updown-list li:active path {
+.results__updown-item:active path {
+    fill: var(--blue-400);
+}
+
+.results__updown-item_current path {
     fill: var(--blue-400);
 }
 
@@ -674,27 +674,29 @@ body {
     grid-row: 1/2;
     justify-self: end;
     align-self: start;
-}
-
-.hotels__stars_4-stars {
     background-image: url(../img/star.svg);
     background-repeat: space;
+    height: 17px;
+}
+
+.hotels__stars_level_5 {
+    width: 115px;
+}
+
+.hotels__stars_level_4 {
     width: 90px;
-    height: 17px;
 }
 
-.hotels__stars_3-stars {
-    background-image: url(../img/star.svg);
-    background-repeat: space;
+.hotels__stars_level_3 {
     width: 66px;
-    height: 17px;
 }
 
-.hotels__stars_2-stars {
-    background-image: url(../img/star.svg);
-    background-repeat: space;
+.hotels__stars_level_2 {
     width: 42px;
-    height: 17px;
+}
+
+.hotels__stars_level_1 {
+    width: 21px;
 }
 
 .hotels__rating {
@@ -769,7 +771,6 @@ body {
 
 .filter__item-list li {
     margin-top: 25px;
-    padding-left: 40px;
 }
 
 .filter__range-filter {
@@ -785,10 +786,25 @@ body {
 .filter__price-controls {
     margin-bottom: 20px;
     border: 2px solid var(--white);
+    border-radius: 2px;
     height: 36px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.filter__price-controls label {
+    position: relative;
+    padding-left: 50px;
+}
+
+.filter__price-controls label+label::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 22px;
+    background-color: var(--white);
+    left: -15px;
 }
 
 .filter__range-controls {
@@ -849,6 +865,7 @@ body {
     display: block;
     cursor: pointer;
     user-select: none;
+    padding-left: 40px;
 }
 
 .filter__checkbox-input+label::before {
@@ -856,55 +873,26 @@ body {
     content: "";
     width: 23px;
     height: 23px;
-    left: -40px;
+    left: 0px;
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
 }
 
 .filter__checkbox-input:checked+label::before {
-    position: absolute;
-    content: "";
     width: 27px;
-    height: 23px;
-    left: -40px;
     background-image: url(../img/checkbox-on.svg);
-    background-repeat: no-repeat;
 }
 
 .filter__checkbox-input:disabled+label::before {
-    position: absolute;
-    content: "";
     width: 27px;
-    height: 23px;
-    left: -40px;
     background-image: url(../img/checkbox-off-disabled.svg);
-    background-repeat: no-repeat;
     cursor: auto;
 }
 
 .filter__checkbox-input:checked:disabled+label::before {
-    position: absolute;
-    content: "";
     width: 27px;
-    height: 23px;
-    left: -40px;
     background-image: url(../img/checkbox-on-disabled.svg);
-    background-repeat: no-repeat;
     cursor: auto;
-}
-
-.filter__price-controls label {
-    position: relative;
-    padding-left: 50px;
-}
-
-.filter__price-controls label+label::before {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 22px;
-    background-color: var(--white);
-    left: -15px;
 }
 
 .filter__button {
@@ -914,6 +902,7 @@ body {
     width: 137px;
     height: 36px;
     border: 2px solid var(--white);
+    border-radius: 2px;
     margin-left: 85px;
 }
 
