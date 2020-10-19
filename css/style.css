@@ -445,6 +445,7 @@ body {
     justify-items: center;
     align-items: center;
     background-color: var(--white-opacity-9);
+    z-index: 1;
 }
 
 .contacts {
@@ -887,6 +888,10 @@ body {
     width: 27px;
     background-image: url(../img/checkbox-off-disabled.svg);
     cursor: auto;
+}
+
+.filter__checkbox-input:focus+label::before {
+    outline: auto 1px var(--black);
 }
 
 .filter__checkbox-input:checked:disabled+label::before {

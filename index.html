@@ -87,7 +87,7 @@
                 <p class="search__info ">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
                 </p>
                 <button class="search__header-button" type="button">Поиск гостиницы в Седоне</button>
-                <form class="search__form" action="https://echo.htmlacademy.ru/courses" method="get">
+                <form class="search__form" action="https://echo.htmlacademy.ru/courses" method="get" target="_blank">
                     <div class="search__field">
                         <label class="search__label" for="checkin">Дата заезда:</label>
                         <input class="search__input" type="date" name="checkin" id="checkin" value="2017-04-24">
@@ -144,31 +144,34 @@
                     <input class="search__submit-button" type="submit" value="Найти">
                 </form>
             </section>
-            <section class="map"></section>
-            <h2 class="visually-hidden">Карта</h2>
+            <section class="map">
+                <h2 class="visually-hidden">Интерактивная карта Cедоны</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104742.91047855139!2d-111.77252255694775!3d34.87592314317596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1602939418268!5m2!1sru!2sru"
+                    width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="true" tabindex="0"></iframe>
+            </section>
         </main>
         <footer class="page-footer">
             <section class="contacts">
                 <h2 class="visually-hidden">Контакты</h2>
-                <p class="contacts__hashtag">#visitSEDONA</p>
+                <p class="contacts__hashtag" aria-label="Найти в Инстаграм">#visitSEDONA</p>
                 <p>ТЕЛ: <a class="contacts__phone" href="tel:+74956660166">+7(495) 666-01-66</a></p>
             </section>
             <section class="footer-socials">
                 <h2 class="visually-hidden">Соцсети</h2>
                 <ul class="footer-socials__list">
                     <li><a class="footer-socials__button" href="#"><span class="visually-hidden">Твиттер</span>
-                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
                   fill="white" />
               </svg></a></li>
                     <li><a class="footer-socials__button" href="#"><span class="visually-hidden">Фейсбук</span><svg width="12"
-                height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
               </svg></a></li>
                     <li><a class="footer-socials__button" href="#"><span class="visually-hidden">Ютуб</span>
                       <svg width="20"
-                height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
                   fill="white" />
@@ -179,7 +182,7 @@
                 <p class="footer-copyright">
                     <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">Website by
             <svg class="footer-copyright__logo" width="114" height="40" viewBox="0 0 114 40" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5197 0.057373H15.3509L0 1.71895V30.4945L15.3509 39.8382L30.7018 30.4945V1.71895L15.5197 0.057373ZM77.0183 1.62185H75.0876V14.7311H77.0183V1.62185ZM40.8619 1.63264V6.76843C41.6131 5.9864 42.6386 5.5436 43.7105 5.53843C44.6823 5.47908
             45.6329 5.84495 46.3253 6.54479C47.0177 7.24462 47.3866 8.21244 47.3399 9.20685V14.7634H45.367V9.46579C45.4231 8.94897 45.2754 8.43059 44.9566 8.02553C44.6377 7.62047 44.174 7.36218 43.6683 7.3079H43.3518C42.3456 7.36979 41.4321 7.9295
             40.9041 8.80764V14.7634H38.8995V1.63264H40.8619ZM77.0183 30.4837H75.2775V29.0595C74.4828 30.1353 73.23 30.7538 71.9119 30.7211C69.4751 30.5528 67.5825 28.4822 67.5825 25.9845C67.5825 23.4867 69.4751 21.4162 71.9119 21.2479C73.1195 21.2052
