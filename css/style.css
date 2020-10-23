@@ -919,3 +919,7 @@ body {
     background-color: var(--white);
     color: var(--black);
 }
+
+.search__form_hidden {
+    display: none;
+}
