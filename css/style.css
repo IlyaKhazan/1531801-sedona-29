@@ -125,12 +125,15 @@ body {
     padding: 15px 72px;
     margin: 0px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .main-navigation__item {
     width: 228px;
+}
+
+.main-navigation__item:nth-child(4n-1) {
+    margin-left: 144px;
 }
 
 .main-navigation__item:nth-child(4n-1),
@@ -142,7 +145,7 @@ body {
     line-height: 26px;
     color: var(--brown-700);
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 }
 
 .features__caption {
@@ -151,7 +154,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .features__list {
@@ -162,6 +165,15 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.features__list p {
+    margin: 0;
+}
+
+.features__number {
+    padding-top: 25px;
+    padding-bottom: 23px;
 }
 
 .features__item-realcity {
@@ -219,13 +231,13 @@ body {
 .features__recomendations-item {
     position: relative;
     padding-top: 120px;
-    padding-bottom: 80px;
+    padding-bottom: 82px;
 }
 
 .features__recomendations-item::before {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 55px;
     left: 162px;
     width: 75px;
     height: 77px;
@@ -250,8 +262,13 @@ body {
 .features__header {
     font-size: 21px;
     font-weight: 700;
-    padding-top: 50px;
+    padding-top: 48px;
     margin: 0;
+}
+
+.features__header_recomendations {
+    padding-top: 40px;
+    padding-bottom: 25px;
 }
 
 .search {
@@ -263,7 +280,7 @@ body {
     font-size: 30px;
     line-height: 24px;
     font-weight: 700;
-    margin: 60px 0px 40px 0px;
+    margin: 60px 0px 28px 0px;
 }
 
 .search__info {
@@ -310,6 +327,7 @@ body {
     margin-left: -284px;
     z-index: 1;
     background-color: var(--white);
+    animation: bounce 2.6s;
 }
 
 .search__field {
@@ -439,7 +457,7 @@ body {
 .map {
     background: url(../img/map.png);
     background-color: var(--blue-400);
-    height: 594px;
+    height: 600px;
     margin-bottom: -115px;
 }
 
@@ -538,7 +556,7 @@ body {
 }
 
 .results__sort {
-    margin: 0px 40px 0px 46px;
+    margin: 0px 40px 5px 46px;
 }
 
 .results__main-list {
@@ -561,10 +579,11 @@ body {
     display: flex;
     align-items: center;
     margin-left: auto;
+    padding-top: 7px;
 }
 
 .results__updown-item {
-    width: 30px;
+    width: 22px;
     text-align: right;
 }
 
@@ -753,7 +772,7 @@ body {
 .filter {
     background-image: url(../img/filter-background.jpg);
     background-repeat: no-repeat;
-    padding: 27px 73px 30px 73px;
+    padding: 27px 73px 32px 73px;
     color: var(--white);
 }
 
@@ -789,7 +808,7 @@ body {
 }
 
 .filter__price-controls {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
     border: 2px solid var(--white);
     border-radius: 2px;
     height: 36px;
@@ -800,7 +819,12 @@ body {
 
 .filter__price-controls label {
     position: relative;
-    padding-left: 50px;
+    padding-left: 45px;
+}
+
+.filter__price-controls label+label {
+    position: relative;
+    padding-left: 25px;
 }
 
 .filter__price-controls label+label::before {
@@ -809,14 +833,14 @@ body {
     width: 2px;
     height: 22px;
     background-color: var(--white);
-    left: -15px;
+    left: -30px;
 }
 
 .filter__range-controls {
     position: relative;
     height: 20px;
     padding-top: 9px;
-    margin-bottom: 18px;
+    margin-bottom: 23px;
 }
 
 .filter__scale {
@@ -836,7 +860,7 @@ body {
     width: 4px;
     height: 4px;
     background-color: var(--grey-900);
-    border: 8px solid var(--white);
+    border: 10px solid var(--white);
     border-radius: 50%;
     box-shadow: 0 2px 0px 0 var(--grey-opacity-3);
     cursor: pointer;
@@ -857,7 +881,7 @@ body {
 
 .filter__item:nth-child(1),
 .filter__item:nth-child(2) {
-    width: 200px;
+    width: 225px;
     margin-right: 30px;
 }
 
@@ -922,4 +946,37 @@ body {
 
 .search__form_hidden {
     display: none;
+}
+
+.search__form_error {
+    animation: shake 0.6s;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes bounce {
+    50% {
+        top: 0px;
+    }
+    100% {
+        top: 50px;
+    }
 }
