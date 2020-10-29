@@ -27,7 +27,6 @@ form.classList.add('search__form_hidden');
 headerButton.addEventListener('click', function(evt) {
     evt.preventDefault();
     form.classList.toggle('search__form_hidden');
-    form.classList.remove('search__form_error');
     if (adultsStorage) { adults.value = adultsStorage };
     if (childrenStorage) { children.value = childrenStorage };
     if (checkinStorage) { checkin.value = checkinStorage };
@@ -35,16 +34,23 @@ headerButton.addEventListener('click', function(evt) {
 });
 
 form.addEventListener('submit', function(evt) {
-    if ((!adults.value && !children.value) || !checkin.value) {
+    if (!adults.value || adults.value === '0' || !checkin.value || !checkout.value) {
         form.classList.add('search__form_error');
         evt.preventDefault();
-
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem('adults', adults.value);
-            localStorage.setItem('children', children.value);
-            localStorage.setItem('checkin', checkin.value);
-            localStorage.setItem('checkout', checkout.value);
-        }
     }
+});
+
+checkout.addEventListener('change', function() {
+    if (isStorageSupport) { localStorage.setItem('checkout', checkout.value); }
+});
+
+checkin.addEventListener('change', function() {
+    if (isStorageSupport) { localStorage.setItem('checkin', checkin.value); }
+});
+
+adults.addEventListener('change', function() {
+    if (isStorageSupport) { localStorage.setItem('adults', adults.value); }
+});
+children.addEventListener('change', function() {
+    if (isStorageSupport) { localStorage.setItem('children', children.value); }
 });

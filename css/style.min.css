@@ -1,3 +1,41 @@
+@keyframes shake {
+    0%,
+    to {
+        transform: translateX(0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-100%)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes bounce-out {
+    0% {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-100%)
+    }
+}
+
 :root {
     --white: #FFFFFF;
     --white-opacity-3: rgba(255, 255, 255, 0.3);
@@ -21,30 +59,30 @@
     --brown-500: #231F20;
     --brown-400: #503E33;
     --brown-300: #604E43;
-    --brown-100: #766357;
+    --brown-100: #766357
 }
 
 *,
-*::before,
-*::after {
-    box-sizing: border-box;
+::after,
+::before {
+    box-sizing: border-box
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     appearance: none;
-    margin: 0;
+    margin: 0
 }
 
 input[type=number] {
     -moz-appearance: textfield;
-    appearance: textfield;
+    appearance: textfield
 }
 
 img {
     max-width: 100%;
-    height: auto;
+    height: auto
 }
 
 .visually-hidden {
@@ -52,14 +90,14 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: none;
+    border: 0;
     padding: 0;
     clip: rect(0 0 0 0);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .page {
-    height: 100%;
+    height: 100%
 }
 
 .intro {
@@ -69,7 +107,7 @@ img {
     height: 509px;
     text-align: center;
     padding-top: 76px;
-    padding-bottom: 80px;
+    padding-bottom: 80px
 }
 
 body {
@@ -80,12 +118,12 @@ body {
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
-    background-color: var(--grey-800);
+    background-color: var(--grey-800)
 }
 
 .page-body {
     height: 100%;
-    position: relative;
+    position: relative
 }
 
 .container {
@@ -96,65 +134,65 @@ body {
     background-color: var(--white);
     width: 1200px;
     margin: 0 auto;
-    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 1, 1, .2)
 }
 
 .main-header__logo {
     position: absolute;
     left: 50%;
-    margin-left: -69px;
+    margin-left: -69px
 }
 
 .main-navigation__link {
     line-height: 26px;
     font-weight: 700;
     color: var(--black);
-    text-decoration: none;
+    text-decoration: none
 }
 
 .main-navigation__link:hover {
-    color: var(--blue-400);
+    color: var(--blue-400)
 }
 
 .main-navigation__link:active {
-    color: var(--black-opacity-3);
+    color: var(--black-opacity-3)
 }
 
 .main-navigation__link_current {
-    color: var(--brown-100);
+    color: var(--brown-100)
 }
 
 .main-navigation__list {
     list-style: none;
     padding: 15px 72px;
-    margin: 0px;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .main-navigation__item {
-    width: 228px;
+    width: 228px
 }
 
 .main-navigation__item:nth-child(4n-1) {
     margin-left: 144px;
+    text-align: right
 }
 
-.main-navigation__item:nth-child(4n-1),
 .main-navigation__item:nth-child(4n) {
-    text-align: right;
+    text-align: right
 }
 
 .features {
     position: relative;
-    z-index: 1;
+    z-index: 1
 }
 
 .features__title {
     line-height: 26px;
     color: var(--brown-700);
     text-align: center;
-    margin-bottom: 52px;
+    margin-bottom: 52px
 }
 
 .features__caption {
@@ -163,7 +201,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-top: 42px;
-    margin-bottom: 43px;
+    margin-bottom: 43px
 }
 
 .features__list {
@@ -173,55 +211,54 @@ body {
     list-style: none;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr
 }
 
 .features__list p {
-    margin: 0;
+    margin: 0
 }
 
 .features__number {
     padding-top: 25px;
-    padding-bottom: 23px;
+    padding-bottom: 23px
 }
 
 .features__item-realcity {
     grid-column: 1/4;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr
 }
 
 .features__item-devilsbridge {
     grid-column: 1/4;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr
 }
 
 .features__item-sights {
     grid-column: 1/2;
     grid-row: 3/4;
-    padding-bottom: 55px;
+    padding-bottom: 55px
 }
 
-.features__item-road {
+.features__item-road,
+.features__item-tourists {
     grid-column: 2/3;
     grid-row: 3/4;
-    padding-bottom: 55px;
+    padding-bottom: 55px
 }
 
 .features__item-tourists {
-    grid-column: 3/4;
-    grid-row: 3/4;
-    padding-bottom: 55px;
+    grid-column: 3/4
 }
 
 .features__item_bg_blue {
     color: var(--white);
-    background-color: var(--blue-400);
+    background-color: var(--blue-400)
 }
 
 .features__item_bg_grey {
-    background-color: var(--grey-800);
+    background-color: var(--grey-800)
 }
 
 .features__recomendations-list {
@@ -234,13 +271,13 @@ body {
     grid-column: 1/4;
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr
 }
 
 .features__recomendations-item {
     position: relative;
     padding-top: 120px;
-    padding-bottom: 82px;
+    padding-bottom: 82px
 }
 
 .features__recomendations-item::before {
@@ -250,41 +287,41 @@ body {
     left: 162px;
     width: 75px;
     height: 77px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat
 }
 
 .features__recomendations-item_house-icon::before {
     background-image: url(../img/icon-1.svg);
-    background-position: bottom;
+    background-position: bottom
 }
 
 .features__recomendations-item_food-icon::before {
     background-image: url(../img/icon-2.svg);
-    background-position: bottom;
+    background-position: bottom
 }
 
 .features__recomendations-item_gifts-icon::before {
     background-image: url(../img/icon-3.svg);
-    background-position: center;
+    background-position: center
 }
 
 .features__header {
     font-size: 21px;
     font-weight: 700;
     padding-top: 48px;
-    margin: 0;
+    margin: 0
 }
 
 .features__header_recomendations {
     padding-top: 40px;
-    padding-bottom: 25px;
+    padding-bottom: 25px
 }
 
 .search {
     text-align: center;
     position: relative;
     padding-top: 60px;
-    z-index: 0;
+    z-index: 0
 }
 
 .search::before {
@@ -295,20 +332,20 @@ body {
     bottom: 0;
     left: 0;
     background-color: var(--white);
-    z-index: -1;
+    z-index: -1
 }
 
 .search__caption {
     font-size: 30px;
     line-height: 24px;
     font-weight: 700;
-    margin: -4px 0 33px 0;
+    margin: -4px 0 33px
 }
 
 .search__info {
     line-height: 24px;
     color: var(--brown-700);
-    margin: 0px;
+    margin: 0
 }
 
 .search__header-button {
@@ -321,59 +358,56 @@ body {
     height: 86px;
     width: 568px;
     margin-top: 45px;
-    border: none;
+    border: 0
 }
 
 .search__header-button:hover {
-    background-color: var(--brown-300);
+    background-color: var(--brown-300)
 }
 
 .search__header-button:active {
-    background-color: var(--brown-400);
+    background-color: var(--brown-400)
 }
 
 .search__form {
-    margin: 0 auto;
     width: 568px;
     text-align: left;
     line-height: 26px;
     font-weight: 700;
-    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-    margin-top: 0;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
     padding: 55px;
-    margin-bottom: 78px;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
     left: 50%;
-    margin-left: -284px;
+    margin: 0 auto 78px -284px;
     z-index: -2;
     background-color: var(--white);
-    animation: bounce 0.6s;
+    animation: bounce .6s
 }
 
 .search__form_hidden {
-    animation: bounce-out 0.6s;
-    animation-fill-mode: forwards;
+    animation: bounce-out .6s;
+    animation-fill-mode: forwards
 }
 
 .search__form_error {
-    animation: shake 0.6s;
+    animation: shake .6s
 }
 
 .search__field {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    position: relative;
+    position: relative
 }
 
 .search__field_half {
-    width: 50%;
+    width: 50%
 }
 
 .search__field+.search__field {
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .search__input {
@@ -384,33 +418,33 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     padding-left: 11px;
-    padding-bottom: 7px;
+    padding-bottom: 7px
 }
 
 .search__input:hover {
-    background-color: var(--grey-100);
+    background-color: var(--grey-100)
 }
 
 .search__input:focus {
     background-color: var(--white);
     border: 2px solid var(--grey-500);
-    outline: none;
+    outline: 0
 }
 
 .search__input_qty {
     width: 114px;
     padding-left: 40px;
     padding-right: 40px;
-    text-align: center;
+    text-align: center
 }
 
 .search__label {
     margin-right: 20px;
-    padding-top: 3px;
+    padding-top: 3px
 }
 
 .search__label_padding {
-    padding-left: 50px;
+    padding-left: 50px
 }
 
 .search__calendar-button {
@@ -418,19 +452,19 @@ body {
     top: 0;
     right: 0;
     bottom: 0;
-    border: none;
+    border: 0
 }
 
 .search__calendar-icon {
-    fill: var(--grey-600);
+    fill: var(--grey-600)
 }
 
 .search__calendar-button:hover .search__calendar-icon {
-    fill: var(--black);
+    fill: var(--black)
 }
 
 .search__calendar-button:active .search__calendar-icon {
-    fill: var(--blue-400);
+    fill: var(--blue-400)
 }
 
 .search__number-button {
@@ -439,29 +473,34 @@ body {
     bottom: 0;
     width: 40px;
     height: 38px;
-    border: none;
-    display: flex;
+    border: 0;
+    display: flex
 }
 
 .search__number-button_plus {
-    right: 0;
+    right: 0
 }
 
 .search__number-button_minus {
-    right: 77px;
+    right: 77px
 }
 
 .search__number-icon {
     margin: auto;
-    fill: var(--grey-600);
+    fill: var(--grey-600)
 }
 
 .search__number-button:hover .search__number-icon {
-    fill: var(--black);
+    fill: var(--black)
 }
 
 .search__number-button:active .search__number-icon {
-    fill: var(--blue-400);
+    fill: var(--blue-400)
+}
+
+.map,
+.search__submit-button {
+    background-color: var(--blue-400)
 }
 
 .search__submit-button {
@@ -469,27 +508,25 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--white);
-    background-color: var(--blue-400);
     width: 100%;
     height: 58px;
     justify-content: center;
-    border: none;
-    margin-top: 52px;
+    border: 0;
+    margin-top: 52px
 }
 
 .search__submit-button:hover {
-    background-color: var(--blue-500);
+    background-color: var(--blue-500)
 }
 
 .search__submit-button:active {
-    background-color: var(--blue-700);
+    background-color: var(--blue-700)
 }
 
 .map {
     background: url(../img/map.png);
-    background-color: var(--blue-400);
     height: 600px;
-    margin-bottom: -128px;
+    margin-bottom: -128px
 }
 
 .page-footer {
@@ -498,37 +535,37 @@ body {
     justify-items: center;
     align-items: center;
     background-color: var(--white-opacity-9);
-    z-index: 1;
+    z-index: 1
 }
 
 .contacts {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    text-align: center;
+    text-align: center
 }
 
 .contacts__hashtag {
-    margin: 23px 0 0 76px;
+    margin: 23px 0 0 76px
 }
 
 .contacts__phone-link {
     color: var(--black);
-    text-decoration: none;
+    text-decoration: none
 }
 
 .contacts__phone {
-    margin: 10px 0px 43px 72px;
+    margin: 10px 0 43px 72px
 }
 
 .footer-socials__list {
-    margin: 0 0 7px 0;
+    margin: 0 0 7px;
     padding: 0;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6px;
-    justify-items: center;
+    justify-items: center
 }
 
 .footer-socials__button {
@@ -538,42 +575,42 @@ body {
     text-decoration: none;
     width: 46px;
     height: 48px;
-    background: var(--blue-400);
+    background: var(--blue-400)
 }
 
 .footer-socials__button:hover {
-    background: var(--blue-500);
+    background: var(--blue-500)
 }
 
 .footer-socials__button:active {
-    background: var(--blue-700);
+    background: var(--blue-700)
 }
 
 .footer-socials__button:active path {
-    opacity: 30%;
+    opacity: 30%
 }
 
 .footer-copyright {
-    margin: 0 72px 5px 0;
+    margin: 0 72px 5px 0
 }
 
 .footer-copyright__link {
     color: var(--black);
-    text-decoration: none;
+    text-decoration: none
 }
 
 .footer-copyright__logo {
     fill: var(--brown-500);
     vertical-align: middle;
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 .footer-copyright__logo:hover {
-    fill: var(--blue-400);
+    fill: var(--blue-400)
 }
 
 .footer-copyright__logo:active {
-    fill: var(--grey-400);
+    fill: var(--grey-400)
 }
 
 .results {
@@ -582,18 +619,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 30px 73px 30px 73px;
+    padding: 30px 73px
 }
 
 .results__quantity {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    margin: -2px 0 0 0;
+    margin: -2px 0 0
 }
 
 .results__sort {
-    margin: 0px 40px 5px 46px;
+    margin: 0 40px 5px 46px
 }
 
 .results__main-list {
@@ -603,96 +640,88 @@ body {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center
 }
 
 .results__item {
-    margin-right: 33px;
+    margin-right: 33px
 }
 
 .results__updown-list {
-    margin: 0;
-    padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
-    margin-left: auto;
-    padding-top: 7px;
+    margin: 0 0 0 auto;
+    padding: 7px 0 0
 }
 
 .results__updown-item {
     width: 22px;
-    text-align: right;
+    text-align: right
 }
 
 .results__updown-item path {
-    fill: var(--grey-200);
+    fill: var(--grey-200)
 }
 
 .results__updown-item:hover path {
-    fill: var(--black);
+    fill: var(--black)
 }
 
-.results__updown-item:active path {
-    fill: var(--blue-400);
-}
-
+.results__updown-item:active path,
 .results__updown-item_current path {
-    fill: var(--blue-400);
+    fill: var(--blue-400)
 }
 
 .results__link {
     color: var(--black-opacity-3);
     border-bottom: 1px dashed var(--blue-400);
-    text-decoration: none;
+    text-decoration: none
 }
 
 .results__link_current {
     color: var(--blue-400);
-    border: none;
+    border: 0
 }
 
 .results__link:hover {
-    color: var(--blue-400);
+    color: var(--blue-400)
 }
 
+.hotels__link,
 .results__link:active {
-    color: var(--black);
+    color: var(--black)
 }
 
 .hotels__link {
-    color: var(--black);
-    text-decoration: none;
+    text-decoration: none
 }
 
 .hotels__link:hover {
-    color: var(--blue-400);
+    color: var(--blue-400)
 }
 
 .hotels__link:active {
-    color: var(--black-opacity-3);
+    color: var(--black-opacity-3)
 }
 
 .hotels__list {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: grid;
+    display: grid
 }
 
 .hotels__item {
     display: grid;
     grid-template-columns: 135px 1fr 120px;
     column-gap: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     border-top: 1px solid var(--grey-500);
-    padding-right: 73px;
-    padding-left: 73px;
+    padding: 30px 73px
 }
 
 .hotels__item:last-child {
-    border-bottom: 1px solid var(--grey-500);
+    border-bottom: 1px solid var(--grey-500)
 }
 
 .hotels__subtitle {
@@ -703,12 +732,12 @@ body {
     font-weight: 700;
     align-self: start;
     margin-top: -6px;
-    margin-bottom: 4px;
+    margin-bottom: 4px
 }
 
 .hotels__photo {
     grid-column: 1/2;
-    grid-row: 1/4;
+    grid-row: 1/4
 }
 
 .hotels__type-price {
@@ -717,12 +746,12 @@ body {
     align-self: start;
     display: grid;
     gap: 15px;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 1fr
 }
 
 .hotels__type-price-item {
-    margin: 0px;
-    padding-bottom: 8px;
+    margin: 0;
+    padding-bottom: 8px
 }
 
 .hotels__button-group {
@@ -730,7 +759,7 @@ body {
     flex-wrap: wrap;
     grid-column: 2/3;
     grid-row: 3/4;
-    align-self: end;
+    align-self: end
 }
 
 .hotels__stars {
@@ -740,117 +769,118 @@ body {
     align-self: start;
     background-image: url(../img/star.svg);
     background-repeat: space;
-    height: 17px;
+    height: 17px
 }
 
 .hotels__stars_level_5 {
-    width: 115px;
+    width: 115px
 }
 
 .hotels__stars_level_4 {
-    width: 90px;
+    width: 90px
 }
 
 .hotels__stars_level_3 {
-    width: 66px;
+    width: 66px
 }
 
 .hotels__stars_level_2 {
-    width: 42px;
+    width: 42px
 }
 
 .hotels__stars_level_1 {
-    width: 21px;
+    width: 21px
 }
 
+.hotels__button,
 .hotels__rating {
     text-align: center;
     text-transform: uppercase;
-    vertical-align: middle;
+    vertical-align: middle
+}
+
+.hotels__rating {
     background-color: var(--grey-300);
     padding: 4px 12px;
     grid-column: 3/4;
     grid-row: 3/4;
     justify-self: end;
-    align-self: end;
+    align-self: end
 }
 
 .hotels__button {
-    text-align: center;
     color: var(--white);
     font-weight: 700;
-    text-transform: uppercase;
     text-decoration: none;
-    vertical-align: middle;
     padding: 3px 16px;
-    background-color: var(--grey-200);
+    background-color: var(--grey-200)
 }
 
 .hotels__button+.hotels__button {
-    margin-left: 7px;
+    margin-left: 7px
 }
 
 .hotels__button_details {
-    background-color: var(--blue-400);
+    background-color: var(--blue-400)
 }
 
 .hotels__button_details:hover {
-    background-color: var(--blue-500);
+    background-color: var(--blue-500)
 }
 
 .hotels__button_details:active {
-    background-color: var(--blue-700);
+    background-color: var(--blue-700)
 }
 
+.filter,
 .hotels__button_book {
-    background-color: var(--brown-100);
+    background-color: var(--brown-100)
 }
 
 .hotels__button_book:hover {
-    background-color: var(--brown-300);
+    background-color: var(--brown-300)
 }
 
 .hotels__button_book:active {
-    background-color: var(--brown-400);
+    background-color: var(--brown-400)
 }
 
 .filter {
     background-image: url(../img/filter-background.jpg);
     background-repeat: no-repeat;
-    padding: 27px 73px 32px 73px;
-    color: var(--white);
-    background-color: var(--brown-100);
+    padding: 27px 73px 32px;
+    color: var(--white)
 }
 
 .filter__form {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .filter__item {
     margin: 0;
     padding: 0;
-    border: none;
+    border: 0
 }
 
 .filter__item-list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 .filter__item-list li {
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 .filter__range-filter {
     width: 317px;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .filter__item-legend {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .filter__price-controls {
@@ -861,17 +891,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: center
 }
 
 .filter__price-controls label {
     position: relative;
-    padding-left: 42px;
+    padding-left: 42px
 }
 
 .filter__price-controls label+label {
     position: relative;
-    padding-left: 25px;
+    padding-left: 25px
 }
 
 .filter__price-controls label+label::before {
@@ -881,25 +911,25 @@ body {
     height: 22px;
     background-color: var(--white);
     left: -29px;
-    bottom: 0;
+    bottom: 0
 }
 
 .filter__range-controls {
     position: relative;
     height: 20px;
     padding-top: 7px;
-    margin-bottom: 23px;
+    margin-bottom: 23px
 }
 
 .filter__scale {
     background: var(--white-opacity-3);
-    height: 2px;
+    height: 2px
 }
 
 .filter__bar {
     background: var(--white);
     height: 2px;
-    width: 100%;
+    width: 100%
 }
 
 .filter__toggle {
@@ -910,31 +940,31 @@ body {
     background-color: var(--grey-900);
     border: 8px solid var(--white);
     border-radius: 50%;
-    box-shadow: 0 2px 0px 0 var(--grey-opacity-3);
-    cursor: pointer;
+    box-shadow: 0 2px 0 0 var(--grey-opacity-3);
+    cursor: pointer
 }
 
 .filter__toggle:hover {
-    transform: scale(1.2);
+    transform: scale(1.2)
 }
 
 .filter__input {
     background-color: transparent;
     text-align: left;
     width: 60px;
-    border: none;
+    border: 0;
     color: inherit;
-    padding-left: 5px;
+    padding-left: 5px
 }
 
 .filter__item:nth-child(1),
 .filter__item:nth-child(2) {
     width: 225px;
-    margin-right: 30px;
+    margin-right: 30px
 }
 
 .filter__item:nth-child(3) {
-    margin-left: auto;
+    margin-left: auto
 }
 
 .filter__label {
@@ -942,7 +972,7 @@ body {
     display: block;
     cursor: pointer;
     user-select: none;
-    padding-left: 40px;
+    padding-left: 40px
 }
 
 .filter__checkbox-input+label::before {
@@ -950,30 +980,30 @@ body {
     content: "";
     width: 23px;
     height: 23px;
-    left: 0px;
+    left: 0;
     background-image: url(../img/checkbox-off.svg);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat
 }
 
 .filter__checkbox-input:checked+label::before {
     width: 27px;
-    background-image: url(../img/checkbox-on.svg);
+    background-image: url(../img/checkbox-on.svg)
 }
 
 .filter__checkbox-input:disabled+label::before {
     width: 27px;
     background-image: url(../img/checkbox-off-disabled.svg);
-    cursor: auto;
+    cursor: auto
 }
 
 .filter__checkbox-input:focus+label::before {
-    outline: auto 1px var(--black);
+    outline: auto 1px var(--black)
 }
 
 .filter__checkbox-input:checked:disabled+label::before {
     width: 27px;
     background-image: url(../img/checkbox-on-disabled.svg);
-    cursor: auto;
+    cursor: auto
 }
 
 .filter__button {
@@ -984,48 +1014,10 @@ body {
     height: 36px;
     border: 2px solid var(--white);
     border-radius: 2px;
-    margin-left: 85px;
+    margin-left: 85px
 }
 
 .filter__button:hover {
     background-color: var(--white);
-    color: var(--black);
-}
-
-@keyframes shake {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(10px);
-    }
-}
-
-@keyframes bounce {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce-out {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
+    color: var(--black)
 }
