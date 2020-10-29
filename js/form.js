@@ -21,11 +21,13 @@ try {
 } catch (err) {
     isStorageSupport = false;
 };
+
 form.classList.add('search__form_hidden');
 
 
 headerButton.addEventListener('click', function(evt) {
     evt.preventDefault();
+
     form.classList.toggle('search__form_hidden');
     if (adultsStorage) { adults.value = adultsStorage };
     if (childrenStorage) { children.value = childrenStorage };
@@ -41,16 +43,29 @@ form.addEventListener('submit', function(evt) {
 });
 
 checkout.addEventListener('change', function() {
-    if (isStorageSupport) { localStorage.setItem('checkout', checkout.value); }
+    if (isStorageSupport) {
+        checkoutStorage = checkout.value;
+        localStorage.setItem('checkout', checkout.value);
+    }
 });
 
 checkin.addEventListener('change', function() {
-    if (isStorageSupport) { localStorage.setItem('checkin', checkin.value); }
+    if (isStorageSupport) {
+        checkinStorage = checkin.value;
+        localStorage.setItem('checkin', checkin.value);
+    }
 });
 
 adults.addEventListener('change', function() {
-    if (isStorageSupport) { localStorage.setItem('adults', adults.value); }
+    if (isStorageSupport) {
+        adultsStorage = adults.value;
+        localStorage.setItem('adults', adults.value);
+    }
 });
+
 children.addEventListener('change', function() {
-    if (isStorageSupport) { localStorage.setItem('children', children.value); }
+    if (isStorageSupport) {
+        childrenStorage = children.value;
+        localStorage.setItem('children', children.value);
+    }
 });

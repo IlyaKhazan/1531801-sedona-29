@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Поиск жилья в городе Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -34,11 +34,11 @@
                 <p class="features__caption">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
                 <p class="features__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
                 <ul class="features__list">
-                    <li class="features__item-realcity features__item features__item_bg_blue">
-                        <div>
+                    <li class="features__item-realcity features__item_bg_blue">
+                        <div class="features__item-info">
                             <h3 class="features__header">Настоящий <br> городок</h3>
-                            <p class="features__number">— №1 —</p>
-                            <p>Седона - не аттракцион для туристов, там <br> течёт своя жизнь</p>
+
+                            <p class="features__description">Седона - не аттракцион для туристов, там <br> течёт своя жизнь</p>
                         </div>
                         <img src="img/real-city.jpg" width="800" height="256" alt="Вид из окна на улицу Седоны">
                         <ul class="features__recomendations-list">
@@ -56,28 +56,24 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="features__item-devilsbridge features__item features__item_bg_blue">
+                    <li class="features__item-devilsbridge features__item_bg_blue">
                         <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост дьявола">
-                        <div>
+                        <div class="features__item-info">
                             <h3 class="features__header">Там есть <br> Мост дьявола</h3>
-                            <p class="features__number">— №2 —</p>
-                            <p>Да, по нему можно пройти! Если конечно <br> вы осмелитесь</p>
+                            <p class="features__description">Да, по нему можно пройти! Если конечно <br> вы осмелитесь</p>
                         </div>
                     </li>
-                    <li class="features__item-sights features__item features__item_bg_grey">
+                    <li class="features__item-sights features__item-info features__item_bg_grey">
                         <h3 class="features__header">небольшая <br> площадь</h3>
-                        <p class="features__number">— №3 —</p>
-                        <p>все достопримечательности <br> находятся очень близко</p>
+                        <p class="features__description">все достопримечательности <br> находятся очень близко</p>
                     </li>
-                    <li class="features__item-road features__item features__item_bg_grey">
+                    <li class="features__item-road features__item-info features__item_bg_grey">
                         <h3 class="features__header ">красивая <br> дорога</h3>
-                        <p class="features__number">— №4 —</p>
-                        <p>ехать в седону из лас-вегаса совсем <br> не скучно!</p>
+                        <p class="features__description">ехать в седону из лас-вегаса совсем <br> не скучно!</p>
                     </li>
-                    <li class="features__item-tourists features__item features__item_bg_grey">
+                    <li class="features__item-tourists features__item-info features__item_bg_grey">
                         <h3 class="features__header ">мало <br> туристов</h3>
-                        <p class="features__number">— №5 —</p>
-                        <p>большинство едет в гранд каньон <br> и толпится там</p>
+                        <p class="features__description">большинство едет в гранд каньон <br> и толпится там</p>
                     </li>
                 </ul>
             </section>
@@ -117,12 +113,12 @@
                     <div class="search__field search__field_half">
                         <label class="search__label" for="adults">Взрослые:</label>
                         <input class="search__input search__input_qty" type="number" name="adults" id="adults" value="2">
-                        <button class="search__number-button search__number-button_minus" type="button" aria-label="Уменьшить количествво взрослых">
+                        <button class="search__number-button search__number-button_minus" type="button" aria-label="Уменьшить количество">
                           <svg class="search__number-icon" width="12" height="3"
                 viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="12" height="3" />
               </svg> </button>
-                        <button class="search__number-button search__number-button_plus" type="button" aria-label="Увеличить количествво взрослых"><svg class="search__number-icon" width="11" height="11"
+                        <button class="search__number-button search__number-button_plus" type="button" aria-label="Увеличить количество"><svg class="search__number-icon" width="11" height="11"
                 viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
@@ -131,11 +127,11 @@
                     <div class="search__field search__field_half">
                         <label class="search__label search__label_padding" for="children">Дети:</label>
                         <input class="search__input search__input_qty" type="number" name="children" id="children" value="0">
-                        <button class="search__number-button search__number-button_minus" type="button" aria-label="Уменьшить количествво взрослых"><svg class="search__number-icon" width="12" height="3"
+                        <button class="search__number-button search__number-button_minus" type="button" aria-label="Уменьшить количество"><svg class="search__number-icon" width="12" height="3"
                 viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="12" height="3" />
               </svg> </button>
-                        <button class="search__number-button search__number-button_plus" type="button" aria-label="Увеличить количествво взрослых"><svg class="search__number-icon" width="11" height="11"
+                        <button class="search__number-button search__number-button_plus" type="button" aria-label="Увеличить количество"><svg class="search__number-icon" width="11" height="11"
                 viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />

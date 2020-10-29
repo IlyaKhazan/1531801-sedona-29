@@ -174,15 +174,27 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    counter-reset: feature-number;
 }
 
 .features__list p {
     margin: 0;
 }
 
-.features__number {
-    padding-top: 25px;
-    padding-bottom: 23px;
+.features__description {
+    padding-top: 70px;
+}
+
+.features__description::before {
+    position: absolute;
+    content: "— №" counter(feature-number) " —";
+    counter-increment: feature-number;
+    top: 115px;
+    left: 175px;
+}
+
+.features__item-info {
+    position: relative;
 }
 
 .features__item-realcity {
