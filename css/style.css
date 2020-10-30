@@ -88,6 +88,11 @@ body {
     position: relative;
 }
 
+.page-main {
+    z-index: 0;
+    position: relative;
+}
+
 .container {
     min-height: 100%;
     display: grid;
@@ -103,6 +108,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -69px;
+    z-index: 1;
 }
 
 .main-navigation__link {
@@ -143,11 +149,6 @@ body {
 .main-navigation__item:nth-child(4n-1),
 .main-navigation__item:nth-child(4n) {
     text-align: right;
-}
-
-.features {
-    position: relative;
-    z-index: 1;
 }
 
 .features__title {
@@ -296,18 +297,7 @@ body {
     text-align: center;
     position: relative;
     padding-top: 60px;
-    z-index: 0;
-}
-
-.search::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background-color: var(--white);
-    z-index: -1;
 }
 
 .search__caption {
@@ -332,7 +322,7 @@ body {
     justify-content: center;
     height: 86px;
     width: 568px;
-    margin-top: 45px;
+    margin-top: 44px;
     border: none;
 }
 
@@ -359,7 +349,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -284px;
-    z-index: -2;
+    z-index: -1;
     background-color: var(--white);
     animation: bounce 0.6s;
 }
@@ -384,8 +374,12 @@ body {
     width: 50%;
 }
 
+.search__field_half+.search__field_half input {
+    padding-right: 36px;
+}
+
 .search__field+.search__field {
-    margin-top: 30px;
+    margin-top: 29px;
 }
 
 .search__input {
@@ -411,7 +405,7 @@ body {
 
 .search__input_qty {
     width: 114px;
-    padding-left: 40px;
+    padding-left: 35px;
     padding-right: 40px;
     text-align: center;
 }
@@ -431,6 +425,7 @@ body {
     right: 0;
     bottom: 0;
     border: none;
+    background-color: transparent;
 }
 
 .search__calendar-icon {
@@ -453,6 +448,7 @@ body {
     height: 38px;
     border: none;
     display: flex;
+    background-color: transparent;
 }
 
 .search__number-button_plus {
@@ -486,7 +482,7 @@ body {
     height: 58px;
     justify-content: center;
     border: none;
-    margin-top: 52px;
+    margin-top: 54px;
 }
 
 .search__submit-button:hover {
@@ -502,6 +498,12 @@ body {
     background-color: var(--blue-400);
     height: 600px;
     margin-bottom: -128px;
+    z-index: -2;
+    position: relative;
+}
+
+.map__frame_noborder {
+    border: none;
 }
 
 .page-footer {

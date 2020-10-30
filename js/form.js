@@ -27,7 +27,7 @@ form.classList.add('search__form_hidden');
 
 headerButton.addEventListener('click', function(evt) {
     evt.preventDefault();
-
+    form.classList.remove('search__form_error');
     form.classList.toggle('search__form_hidden');
     if (adultsStorage) { adults.value = adultsStorage };
     if (childrenStorage) { children.value = childrenStorage };
