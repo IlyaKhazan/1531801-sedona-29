@@ -88,6 +88,11 @@ body {
     position: relative;
 }
 
+.page-main {
+    z-index: 0;
+    position: relative;
+}
+
 .container {
     min-height: 100%;
     display: grid;
@@ -171,7 +176,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     counter-reset: feature-number;
-    background-color: var(--white);
 }
 
 .features__list p {
@@ -207,14 +211,20 @@ body {
 }
 
 .features__item-sights {
+    grid-column: 1/2;
+    grid-row: 3/4;
     padding-bottom: 55px;
 }
 
 .features__item-road {
+    grid-column: 2/3;
+    grid-row: 3/4;
     padding-bottom: 55px;
 }
 
 .features__item-tourists {
+    grid-column: 3/4;
+    grid-row: 3/4;
     padding-bottom: 55px;
 }
 
@@ -324,15 +334,6 @@ body {
     background-color: var(--brown-400);
 }
 
-.search__container {
-    position: relative;
-    z-index: 0;
-    padding-bottom: 78px;
-    overflow: hidden;
-    margin-bottom: -120px;
-    padding-bottom: 198px;
-}
-
 .search__form {
     margin: 0 auto;
     width: 568px;
@@ -342,18 +343,20 @@ body {
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
     margin-top: 0;
     padding: 55px;
+    margin-bottom: 78px;
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
     left: 50%;
+    margin-left: -284px;
+    z-index: -1;
     background-color: var(--white);
     animation: bounce 0.6s;
-    transition: box-shadow 500ms;
 }
 
 .search__form_hidden {
     animation: bounce-out 0.6s;
     animation-fill-mode: forwards;
-    box-shadow: none;
 }
 
 .search__form_error {
@@ -490,17 +493,16 @@ body {
     background-color: var(--blue-700);
 }
 
-.search__map {
+.map {
     background: url(../img/map.png);
     background-color: var(--blue-400);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: 600px;
+    margin-bottom: -128px;
+    z-index: -2;
+    position: relative;
+}
+
+.map__frame_noborder {
     border: none;
 }
 
@@ -510,7 +512,6 @@ body {
     justify-items: center;
     align-items: center;
     background-color: var(--white-opacity-9);
-    position: relative;
     z-index: 1;
 }
 
@@ -829,7 +830,6 @@ body {
 
 .filter {
     background-image: url(../img/filter-background.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
     padding: 27px 73px 32px 73px;
     color: var(--white);
